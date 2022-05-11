@@ -59,7 +59,7 @@ spec:
             - /bin/karmada-controller-manager
             - --kubeconfig=/etc/kubeconfig
             - --bind-address=0.0.0.0
-            - --controllers="-namespace"
+            - --controllers=cluster,clusterStatus,binding,execution,workStatus,serviceExport,endpointSlice,serviceImport,unifiedAuth,federatedResourceQuotaSync,federatedResourceQuotaStatus
             - --cluster-status-update-frequency=10s
             - --secure-port=10357
             - --v=2

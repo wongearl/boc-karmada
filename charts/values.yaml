@@ -39,7 +39,7 @@ certs:
   mode: auto
   auto:
     ## @param certs.auto.expiry expiry of the certificate
-    expiry: 43800h
+    expiry: 876000h
     ## @param certs.auto.hosts hosts of the certificate
     hosts: [
       "kubernetes.default.svc",
@@ -96,11 +96,11 @@ scheduler:
   imagePullSecrets: [ ]
   image:
     ## @param scheduler.image.repository image of the scheduler
-    repository: swr.ap-southeast-1.myhuaweicloud.com/karmada/karmada-scheduler
+    repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-scheduler-estimator
     ## @param scheduler.image.pullPolicy pull policy of image
     pullPolicy: IfNotPresent
     ## @param scheduler.image.tag overrides the image tag whose default is the latest
-    tag: latest
+    tag: v1.1.0-397-gb2ebfb60
   ## @param scheduler.resources
   resources: { }
     # If you do want to specify resources, uncomment the following
@@ -140,11 +140,11 @@ webhook:
   imagePullSecrets: [ ]
   image:
     ## @param webhook.image.repository image of the webhook
-    repository: swr.ap-southeast-1.myhuaweicloud.com/karmada/karmada-webhook
+    repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-webhook
     ## @param webhook.image.pullPolicy pull policy of image
     pullPolicy: IfNotPresent
     ## @param webhook.image.tag overrides the image tag whose default is the latest
-    tag: latest
+    tag: v1.1.0-397-gb2ebfb60
   ## @param webhook.resources
   resources: { }
     # If you do want to specify resources, uncomment the following
@@ -184,11 +184,11 @@ controllerManager:
   imagePullSecrets: [ ]
   image:
     ## @param controllerManager.image.repository image of the controller manager
-    repository: swr.ap-southeast-1.myhuaweicloud.com/karmada/karmada-controller-manager
+    repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-controller-manager
     ## @param controllerManager.image.pullPolicy pull policy of image
     pullPolicy: IfNotPresent
     ## @param controllerManager.image.tag overrides the image tag whose default is the latest
-    tag: latest
+    tag: v1.1.0-397-gb2ebfb60
   ## @param controllerManager.resources
   resources: { }
     # If you do want to specify resources, uncomment the following
@@ -228,7 +228,7 @@ apiServer:
   imagePullSecrets: []
   image:
     ## @param apiServer.image.repository image of the apiserver
-    repository: k8s.gcr.io/kube-apiserver
+    repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-k8sgcrio-kube-apiserver
     ## @param apiServer.image.pullPolicy pull policy of image
     pullPolicy: IfNotPresent
     ## @param apiServer.image.tag overrides the image tag whose default is the latest
@@ -296,11 +296,11 @@ aggregatedApiServer:
   imagePullSecrets: []
   image:
     ## @param aggregatedApiServer.image.repository image of the apiserver
-    repository: swr.ap-southeast-1.myhuaweicloud.com/karmada/karmada-aggregated-apiserver
+    repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-aggregated-apiserver
     ## @param aggregatedApiServer.image.pullPolicy pull policy of image
     pullPolicy: IfNotPresent
     ## @param aggregatedApiServer.image.tag overrides the image tag whose default is the latest
-    tag: latest
+    tag: v1.1.0-397-gb2ebfb60
   ## @param aggregatedApiServer.resources
   resources: 
     requests:
@@ -342,7 +342,7 @@ kubeControllerManager:
   imagePullSecrets: []
   image:
     ## @param kubeControllerManager.image.repository image of the kube controller manager
-    repository: k8s.gcr.io/kube-controller-manager
+    repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-k8sgcrio-kube-apiserver
     ## @param kubeControllerManager.image.pullPolicy pull policy of image
     pullPolicy: IfNotPresent
     ## @param kubeControllerManager.image.tag overrides the image tag whose default is the latest
@@ -404,7 +404,7 @@ etcd:
     replicaCount: 1
     image:
       ## @param etcd.internal.image.repository image of the etcd
-      repository: k8s.gcr.io/etcd
+      repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-k8sgcrio-etcd
       ## @param etcd.internal.image.pullPolicy pull policy of image
       pullPolicy: IfNotPresent
       ## @param etcd.internal.image.tag overrides the image tag whose default is the latest
@@ -465,11 +465,11 @@ agent:
   imagePullSecrets: [ ]
   image:
     ## @param agent.image.repository image of the agent
-    repository: swr.ap-southeast-1.myhuaweicloud.com/karmada/karmada-agent
+    repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-agent
     ## @param agent.image.pullPolicy pull policy of image
     pullPolicy: IfNotPresent
     ## @param agent.image.tag overrides the image tag whose default is the latest
-    tag: latest
+    tag: v1.1.0-397-gb2ebfb60
   ## @param agent.resources 
   resources: { }
     # If you do want to specify resources, uncomment the following
@@ -529,11 +529,11 @@ schedulerEstimator:
   imagePullSecrets: [ ]
   image:
     ## @param schedulerEstimator.image.repository image of the apiserver
-    repository: swr.ap-southeast-1.myhuaweicloud.com/karmada/karmada-scheduler-estimator
+    repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-scheduler-estimator
     ## @param schedulerEstimator.image.pullPolicy pull policy of image
     pullPolicy: IfNotPresent
     ## @param schedulerEstimator.image.tag overrides the image tag whose default is the latest
-    tag: "latest"
+    tag: v1.1.0-397-gb2ebfb60
   ## @param schedulerEstimator.resources
   resources: { }
     # If you do want to specify resources, uncomment the following
@@ -573,11 +573,11 @@ descheduler:
   imagePullSecrets: [ ]
   image:
     ## @param descheduler.image.repository image of the descheduler
-    repository: swr.ap-southeast-1.myhuaweicloud.com/karmada/karmada-descheduler
+    repository: registry.cn-hangzhou.aliyuncs.com/earl-k8s/karmada-descheduler
     ## @param descheduler.image.pullPolicy pull policy of image
     pullPolicy: IfNotPresent
     ## @param descheduler.image.tag overrides the image tag whose default is the latest
-    tag: latest
+    tag: v1.1.0-397-gb2ebfb60
   ## @param descheduler.resources
   resources: { }
     # If you do want to specify resources, uncomment the following
